@@ -1,0 +1,71 @@
+{% extends "crypto_app/base.html" %}
+{% load static %}
+{% block css %}
+body {	
+	font-family: Arial, Helvetica, sans-serif;
+	background-image: url('https://images.financialexpress.com/2021/04/STOCK_MARKET-11a.jpg');
+      	background-repeat: no-repeat;
+      	background-attachment: fixed;
+      	background-position:absolute;
+      	background-size: cover;
+}
+#box {
+  width: 950px;
+  border: 5px solid;
+  padding: 5px;
+  margin:5px;
+}
+#boxText{
+ color:white;
+}
+#box1 {
+  width: 570px;
+height:300px;
+  border: 5px solid;
+  padding: 0px;
+  margin:5px;
+}
+{% endblock css %}
+{% block nav %}
+<li class="active">
+    <a href="pred">
+        Prediction
+    </a>
+</li>
+
+{% endblock nav %}
+{% block content %}
+<center>
+<div id ="box" class="blue darken-1">
+<h3 id ="boxText"> Cryptocurrency Statistics and Price Prediction </h3>
+</div>
+<div id ="box1" class="white">
+<div class="content">
+    <div class="form-group col-sm-6 col-sm-offset-3">
+        <h4 align="center">
+            Get Your Predictions !
+        </h4>
+        <form align="left" class="" id="search">
+            <input class="form-control typeahead" data-url2="{% static 'crypto_app/data/cryptocurrencies.json' %}" data-url="{% static 'crypto_app/data/cryptocurrencies.json' %}" id="typeahead" placeholder="Search Cryptocurrency Symbol..." type="text" usr-url=""/>
+        </form>
+    </div>
+    <br>
+        <br>
+            <br>
+                <br>
+                    <br>
+                        <br>
+                            <br>
+                                <br>
+                                </br>
+                            </br>
+                        </br>
+                    </br>
+                </br>
+            </br>
+        </br>
+    </br>
+</div>
+</div>
+</center>
+{% endblock content %}

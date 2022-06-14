@@ -1,0 +1,203 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Smart Voting System Home Page
+{% endblock %}
+{% block style %}
+/*
+body{
+	background-image: url('https://thumbs.dreamstime.com/z/finance-investment-signs-seamless-pattern-background-white-vector-finance-investment-signs-seamless-pattern-background-170598197.jpg');
+      	background-repeat: no-repeat;
+      	background-attachment: fixed;
+      	background-position:0% 60%;
+      	background-size: 1550px;
+}*/
+#box {
+  width: 400px;
+  border: 5px solid;
+  padding: 5px;
+  margin:5px;
+}
+#boxStock {
+  width: 800px;
+  border: 5px solid;
+  padding: 5px;
+  margin:5px;
+}
+#boxText{
+ color:white;
+}
+
+#box1{
+width:1000px;
+  border: 5px solid;
+  padding: 5px;
+  margin:5px;
+}
+#box2{
+width:1000px;
+  border: 5px solid;
+  padding: 5px;
+  margin:5px;
+}
+#cardimg1{
+width:400px;
+height:250px;
+}
+
+{% endblock %}
+{% block content %}
+<nav class="black">
+    	<div class="nav-wrapper">
+      		<a href="#" class="brand-logo">The Complete Financial Analyzer</a>
+		<ul id="nav-mobile" class="right hide-on-med-and-down">
+		</ul>
+	</div>
+	</nav>
+
+<br>
+<br>
+<center>
+<div id = "box2">
+<center>
+<div id ="box" class="blue darken-1">
+<h3 id ="boxText"> Live Market Today </h3>
+</div>
+</center>
+  <div class="card-group">
+    <div class="row ">
+        <div class="col-sm-6">
+          <div class="card  bg-primary mb-3" style="max-width: 35rem;">
+<h5 class="card-title" style="color:white;" >BITCOIN</h5>
+            <div class="card" style="width: 25rem;">
+	<h1 style="color:black;">${{ niftydata }}</h1>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="card bg-primary mb-3" style="max-width: 35rem;">
+<h5 class="card-title" style="color:white;" >ETHEREUM</h5>
+            <div class="card" style="width: 25rem;">
+	<h1 style="color:black;">${{ sensexdata }} </h1>	
+
+            </div>
+          </div>
+        </div>
+     
+
+
+
+
+
+  </div>
+</div>
+</div>
+</div>
+</center>
+
+<center>
+<div id = "box2">
+<center>
+<div id ="boxStock" class="blue darken-1">
+<h3 id ="boxText"> Top 10 Cryptocurrencies</h3>
+<table style="color:white;">
+		{% if finalCryptoData %}
+		<tr bgcolor="black">
+			<th> Cryptocurrency </th>
+			<th> Ticker </th>
+			<th> Open </th>
+			<th> Close  </th>
+			<th> Day High </th>
+			<th> Day Low</th>
+		</tr>
+			{% for d in finalCryptoData %}
+			<tr>
+			{% for k in d %}
+					<td> {{ k }} </td>
+			{% endfor %}
+			</tr>
+			{% endfor %}
+		{% else %}
+		<tr>
+			<td> No Data Found </td>
+		</tr>
+		{% endif %}
+	</table>
+</div>
+</center>
+</center>
+<center>
+<div id ="box1">
+<center>
+<div id ="box" class="blue darken-1">
+<h3 id ="boxText"> Our Services </h3>
+</div>
+</center>
+<br>
+  <div class="card-group">
+    <div class="row ">
+        <div class="col-sm-6">
+          <div class="card  bg-primary mb-3" style="max-width: 35rem;">
+<h5 class="card-title" style="color:white;" >Crypto Price Prediction</h5>
+            <div class="card" style="width: 25rem;">
+	 <img  id="cardimg1" class="card-img-top" src="https://thumbs.dreamstime.com/b/stock-price-increase-announcement-big-orange-arrow-points-up-vector-eps-realization-potential-success-rates-rising-186177857.jpg">
+<a href="{% url 'predCrypt' %}" class="btn btn-primary">Click Here</a>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="card bg-primary mb-3" style="max-width: 35rem;">
+<h5 class="card-title" style="color:white;">Create Your Portfolio</h5>
+            <div class="card" style="width: 25rem;">
+	 <img  id="cardimg1" class="card-img-top" src="https://outsidetheboxmom.com/wp-content/uploads/2020/07/Managing-Investment-Portfolio-5-Unique-Risks-to-Avoid.png">
+<a href="{% url 'add_crypto' %}" class="btn btn-primary" >Click Here</a>
+
+
+            </div>
+          </div>
+        </div>
+     
+
+
+
+
+
+  </div>
+</div>
+</div>
+</center>
+<br>
+<br>
+<footer class="page-footer blue darken-1">
+  <div class="container" id="foot1">
+    <div class="row">
+      <div class="col l6 s18">
+        <h5 class="white-text">Contact us</h5>
+        <h6>2018.baldev.sundarani@ves.ac.in</h6>
+        <h6>2018.simran.gurnani@ves.ac.in</h6>
+        <h6>2018.abhishek.waghmare@ves.ac.in</h6>
+        <h6>2018.hitesh.santani@ves.ac.in</h6>
+
+      </div>
+      <div class="col l4 offset-l2 s12">
+        <h5 class="white-text">Quick Links</h5>
+        <ul>
+          <li><a class="grey-text text-lighten-3" href="#">About us</a></li>
+          <li><a class="grey-text text-lighten-3" href="#">Contact us </a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+
+      <a class="grey-text text-lighten-4 right" href="#!"></a>
+    </div>
+  </div>
+</footer>
+
+<script type="text/javascript" src={% static "js/materialize.min.js"%}></script>
+{% endblock %}

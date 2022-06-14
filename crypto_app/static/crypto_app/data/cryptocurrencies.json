@@ -1,0 +1,12 @@
+[
+{ "name":"Bitcoin", "slug":"BTC", "se": "USD" },
+{ "name":"Ethereum", "slug":"ETH", "se": "USD" },
+{ "name":"Tether", "slug":"USDT", "se": "USD" },
+{ "name":"Binance Coin", "slug":"BNB", "se": "USD" },
+{ "name":"USD Coin", "slug":"USDC", "se": "USD" },
+{ "name":"Cardano", "slug":"ADA", "se": "USD" },
+{ "name":"Solana", "slug":"SOL", "se": "USD" },
+{ "name":"HEX", "slug":"HEX", "se": "USD" },
+{ "name":"XRP", "slug":"XRP", "se": "USD" },
+{ "name":"Terra", "slug":"LUNA1", "se": "USD" }
+]

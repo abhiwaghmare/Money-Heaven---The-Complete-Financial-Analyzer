@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<link rel="stylesheet" href="{% static "css/style1.css" %}">
+	<link type="text/css" rel="stylesheet" href={% static "css/materialize.min.css" %} media="screen,projection" />
+
+
+  <style type="text/css">
+		*{font-size:20px;font-family:calibri;}
+		.nav { background-color:blue;}
+		.nav a{color:white;text-decoration:none;padding:30px;}
+		.brand-logo{font-family:'Brush Script MT', cursive;}
+	
+  </style>
+</head>
+
+<body>
+	<nav class="blue darken-1">
+    	<div class="nav-wrapper">
+      		<a href="#" class="brand-logo">MoneyHeaven</a>
+		<ul id="nav-mobile" class="right hide-on-med-and-down">
+		
+		<li><a href="{% url 'home' %}" id="backhome">Home</a></li>
+		
+		</ul>
+	</div>
+	</nav>
+<nav class="black">
+    	<div class="nav-wrapper">
+      		<a href="#" class="brand-logo">The Complete Financial Analyzer</a>
+		<ul id="nav-mobile" class="right hide-on-med-and-down">
+		</ul>
+	</div>
+	</nav>
+
+
+
+</body>
+
+</html>

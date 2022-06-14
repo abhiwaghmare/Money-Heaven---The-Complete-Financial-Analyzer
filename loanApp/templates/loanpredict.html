@@ -1,0 +1,174 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Loan Eligibility Prediction {% endblock %}
+{% block css %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+{% endblock %}
+{% block style %}
+*{ font-size:40px;}
+#box {
+  width: 950px;
+  border: 5px solid;
+  padding: 5px;
+  margin:5px;
+}
+#boxText{
+ color:white;
+}
+table{
+border: 15px solid black;
+font-size:40px;
+}
+
+label{
+font-size:30px;
+}
+body {	
+	font-family: Arial, Helvetica, sans-serif;
+	background-image: url('https://image.shutterstock.com/image-photo/white-wooden-house-symbol-keys-260nw-1752190211.jpg');
+      	background-repeat: no-repeat;
+      	background-attachment: fixed;
+      	background-position:absolute;
+      	background-size: cover;
+}
+* {box-sizing: border-box;}
+	/* Set a style for the submit button */
+
+	.btn {
+		font-size:15px;
+		background-color: dodgerblue;
+		color: white;
+		padding: 0px 5px;
+		border: 2px solid black;
+		width: 40%;
+		opacity: 0.9;
+		box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+		text-align:center;
+		margin:auto;
+	}
+	.btn:hover {
+		opacity: 60;
+		background-color: #87CEEB;
+		color:white;		
+	}
+	
+
+.thinborder{
+  border: 1px solid black;
+  width: 100%;
+  border-radius: 6px;
+}
+.login-box{
+	min-width:2000px;
+	max-width:5000px;
+	float: center;
+	margin:100px auto;
+	padding-left:40px;
+
+}
+.login-left{
+	background:white;
+	padding: 30px;
+}
+
+.input-container {
+	display: -ms-flexbox; /* IE10 */
+	display: flex;
+	width: 100%;
+	margin-bottom: 15px;
+}
+
+.icon {
+	padding: 10px;
+	background: dodgerblue;
+	color: white;
+	min-width: 50px;
+	text-align: center;
+}
+.input-field {
+	width: 100%;
+	padding: 10px;
+	outline: none;
+}
+
+.input-field:focus {
+	border: 2px solid dodgerblue;
+}
+
+
+h2{
+	text-align: center;
+}
+.avatar{
+  padding: 10px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  border-radius: 50%;
+  position: absolute;
+  top:100px;
+  left: calc(50% - 145px);
+  background: dodgerblue;
+  z-index: 9;
+  width: 95px;
+  height: 95px;
+  margin: 0 auto;
+  left: ;
+  right: calc(50% - 60px);;
+  top: 110px;
+}
+.avatar img{
+  width: 70px
+}
+
+
+{% endblock %}
+{% block content %}
+<center>
+<div id ="box" class="blue darken-1">
+<h3 id ="boxText">Loan Eligibility Prediction</h3>
+</div>
+</center>
+<div class="container">
+<div class="login-box">
+<div class="row">
+<div class="col-md-6 login-left thinborder">
+<center>
+ {%if data == "0"%}
+    <h3 class="">According to our calculations, you will not get the loan from Bank...!</h3>
+  {%else%}
+    <h3 class="">Congratulations!! you will get the loan from Bank...!</h3>  
+  {% endif%}
+</center>
+</div>
+</div>
+</div>
+</div>
+<footer class="page-footer blue darken-1">
+  <div class="container" id="foot1">
+    <div class="row">
+      <div class="col l6 s18">
+        <h5 class="white-text">Contact us</h5>
+        <h6>2018.baldev.sundarani@ves.ac.in</h6>
+        <h6>2018.simran.gurnani@ves.ac.in</h6>
+        <h6>2018.abhishek.waghmare@ves.ac.in</h6>
+        <h6>2018.hitesh.santani@ves.ac.in</h6>
+
+      </div>
+      <div class="col l4 offset-l2 s12">
+        <h5 class="white-text">Quick Links</h5>
+        <ul>
+          <li><a class="grey-text text-lighten-3" href="#">About us</a></li>
+          <li><a class="grey-text text-lighten-3" href="#">Contact us </a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+
+      <a class="grey-text text-lighten-4 right" href="#!"></a>
+    </div>
+  </div>
+</footer>
+
+{% endblock %}

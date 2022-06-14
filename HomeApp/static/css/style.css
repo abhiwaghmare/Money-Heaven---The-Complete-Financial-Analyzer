@@ -1,0 +1,65 @@
+
+.thinborder{
+  border: 1px solid black;
+  width: 100%;
+  border-radius: 6px;
+}
+.login-box{
+	max-width: 3000px;
+	float: center;
+	margin: 100px auto;
+	padding-left: 320px;
+
+}
+.login-left{
+	background: rgba(231, 243, 251, 0.6);
+	padding: 30px;
+}
+
+.input-container {
+	/*display: -ms-flexbox; IE10 */
+	display: flex;
+	width: 100%;
+	margin-bottom: 15px;
+}
+
+.icon {
+	padding: 10px;
+	background: dodgerblue;
+	color: white;
+	min-width: 50px;
+	text-align: center;
+}
+.input-field {
+	width: 100%;
+	padding: 10px;
+	outline: none;
+}
+
+.input-field:focus {
+	border: 2px solid dodgerblue;
+}
+
+
+h2{
+	text-align: center;
+}
+.avatar{
+  padding: 10px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  border-radius: 50%;
+  position: absolute;
+  top:100px;
+  left: calc(50% - 145px);
+  background: dodgerblue;
+  z-index: 9;
+  width: 95px;
+  height: 95px;
+  margin: 0 auto;
+  left: ;
+  right: calc(50% - 60px);;
+  top: 110px;
+}
+.avatar img{
+  width: 70px
+}
